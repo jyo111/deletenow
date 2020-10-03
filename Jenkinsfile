@@ -3,17 +3,17 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-               echo 'Hi'               
+               echo 'master branch'               
             }
         }
         stage('Test') {
             steps {
-                echo 'Hello'
+                echo 'master branch'
             }
         }
         stage('Deploy') {
             steps {
-                echo '-----How---'
+                echo '-----master branch---'
             }
         }
     }
