@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    tools {
+        gradle 'Gradle 6.6.1'
+    }
     stages {
         stage('run frontend') {
             steps {
@@ -11,10 +14,8 @@ pipeline {
         }
         stage('run backend') {
             steps {
-                echo 'executing Gradle---'
-                withGradle() {
-                    sh './gradlew -v'
-                }
+                echo 'executing Gradle---'                
+                    sh './gradlew -v'                
             }
         }
     }
